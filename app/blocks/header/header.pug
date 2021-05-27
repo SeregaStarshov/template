@@ -1,0 +1,16 @@
+header.header
+	.container
+		.header__logo
+			a(href="#")
+				img(src="images/logo_circle1.svg" alt="logo")
+		nav.nav__menu
+			-var active ='Home'
+			ul.menu__list
+				each name in ["Home", "Farm", "FAQ's"]
+					li
+						if active == name
+							a(href="#" class="active")=name
+						else 
+							a(href="#" class="")=name
+		.header__total
+			span 0.000 COMB

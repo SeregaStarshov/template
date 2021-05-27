@@ -1,0 +1,38 @@
+.header {
+    background-color: $background-header;
+    font-size: 1.5rem;
+}
+.container {
+    @include flex-between-center;
+    padding: 20px 32px;
+}
+.menu__list {
+    @include flex-between-center;
+    font-weight: bold;
+    li {
+        &:not(:last-child) {
+            padding-right: 6rem;
+        }
+        a {
+            color: $color-text;
+            display: block;
+            padding: .8rem;
+            &.active,
+            &:hover {
+                color: $white;
+            }
+        }
+    }  
+}
+.header__total {
+    min-width: 12.5rem;
+    height: 4rem;
+    border: 1px solid #475267;
+    border-radius: 5px;
+    span {
+        color: $white;
+        font-size: 1.3rem;
+        display: block;
+        margin: 12px 20px;
+    }
+}
